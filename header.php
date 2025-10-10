@@ -59,5 +59,5 @@
     <a href="products.php">Products</a>
     <a href="news.php">News</a>
     <a href="contacts.php">Contact</a>
-    <a href="Animal.php">Animal</a>
+    <a href="animal.php">Animal</a>
 </nav>
