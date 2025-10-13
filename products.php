@@ -2,11 +2,13 @@
 
 <body>
 
-    <div class="container">
+
+  
+    <br>
+    <div class="product-grid-wrapper">
         <h1>Merch</h1>
-        <br>
         <div class="product-grid">
-            
+
             <!-- Product Card 1 -->
             <div class="product-card">
                 <img src="https://images.footballfanatics.com/san-jose-state-spartans/mens-gameday-greats-number-1-white-san-jose-state-spartans-lightweight-basketball-jersey_ss5_p-200939478+u-xvp0epcklssnbrypc8p5+v-gsbwtolktlbsbbcyvn3z.png?_hv=2"
@@ -51,66 +53,70 @@
         </div>
     </div>
     <style>
-    * {
-        box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
+        .product-grid-wrapper {
+            justify-content: center;
+            padding: 20px;
+        }
 
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-    .product-card {
-        background: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-    }
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
 
-    .product-card:hover {
-        transform: translateY(-5px);
-    }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
 
-    .product-card img {
-        display: block;
-        margin: 0 auto;
-        /* ✅ centers block-level image */
-        width: 300px;
-        height: 300px;
-    }
+        .product-card img {
+            display: block;
+            margin: 0 auto;
+            /* ✅ centers block-level image */
+            width: 300px;
+            height: 300px;
+        }
 
-    .product-info {
-        text-align: center;
+        .product-info {
+            text-align: center;
 
-    }
+        }
 
-    .product-title {
-        font-size: 18px;
-        margin: 0 0 10px;
-        color: #333;
-    }
+        .product-title {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #333;
+        }
 
-    .product-price {
-        font-size: 16px;
-        color: #27ae60;
-        margin-bottom: 15px;
-    }
+        .product-price {
+            font-size: 16px;
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
 
-    .product-button {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #3498db;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
+        .product-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-    .product-button:hover {
-        background: #2980b9;
-    }
+        .product-button:hover {
+            background: #2980b9;
+        }
     </style>
 </body>

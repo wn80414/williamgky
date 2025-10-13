@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Spartan Clothing</title>
+    <title>Spartan Market</title>
     <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
 
-        /* Navbar Styles */
-        nav {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
-            padding: 15px;
-            text-align: center;
+            padding: 0 20px;
+            height: 60px;
         }
 
-        nav a {
+        .nav-center,
+        .nav-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-center {
+            margin: 0 auto;
+        }
+
+        .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            padding: 10px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
         }
 
         /* Page Content */
         .container {
-            padding: 40px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
@@ -50,13 +57,24 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navigation Bar -->
-<nav>
-    <a href="home.php">Home</a>
-    <a href="about.php">About</a>
-    <a href="products.php">Products</a>
-    <a href="news.php">News</a>
-    <a href="contacts.php">Contact</a>
-</nav>
+    <div class="navbar">
+        <div class="nav-center">
+            <a href="home.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="products.php">Products</a>
+            <a href="news.php">News</a>
+            <a href="contacts.php">Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

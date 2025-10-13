@@ -1,8 +1,11 @@
 <?php include('header.php'); ?>
 
 <!-- Main Content -->
+ <div class="container">
+    <h1>About</h1>
+ </div>
 <div class="container">
-    <h1>About</h1><br>
+
 
     <p>Welcome to your go-to destination for all things San Jose State University!
         <br>
