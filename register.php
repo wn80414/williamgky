@@ -48,10 +48,14 @@
 </head>
 
 <body>
+    <br>
     <div class="container">
 
         <form class="register-form" action="register_handler.php" method="POST">
             <h2>Register</h2>
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required
 
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>

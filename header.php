@@ -67,6 +67,7 @@
             <a href="products.php">Products</a>
             <a href="news.php">News</a>
             <a href="contacts.php">Contact</a>
+            <a href="animal.php">Animal</a>
         </div>
         <div class="nav-right">
             <a href="register.php">Register</a>
@@ -77,4 +78,3 @@
 </body>
 
 </html>
-
