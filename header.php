@@ -1,7 +1,11 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <title>Spartan Market</title>
     <style>
@@ -70,8 +74,15 @@
             <a href="animal.php">Animal</a>
         </div>
         <div class="nav-right">
-            <a href="register.php">Register</a>
-            <a href="login.php">Login</a>
+            <?php if (!isset($_SESSION['user']) || $_SESSION['logged_in'] !== true): ?>
+                <!-- Show these if NOT logged in -->
+                <a href="register.php">Register</a>
+                <a href="login.php">Login</a>
+            <?php else: ?>
+                <!-- Show these if logged in -->
+                <p><a href="secure.php">Profile: <?= htmlspecialchars(strtoupper($_SESSION['user'])); ?></a></p>
+                <p> <a href="logout.php">Logout</a></p>
+            <?php endif; ?>
         </div>
     </div>
 
