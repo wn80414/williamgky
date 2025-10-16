@@ -75,14 +75,18 @@ session_start();
         </div>
         <div class="nav-right">
             <?php if (!isset($_SESSION['user']) || $_SESSION['logged_in'] !== true): ?>
-                <!-- Show these if NOT logged in -->
-                <a href="register.php">Register</a>
-                <a href="login.php">Login</a>
-            <?php else: ?>
-                <!-- Show these if logged in -->
+            <!-- Show these if NOT logged in -->
+            <a href="register.php">Register</a>
+            <a href="login.php">Login</a>
+        <?php else: ?>
+            <!-- Show these if logged in -->
+            <?php if ($_SESSION['role'] === 'admin' || $_SESSION['logged_in'] !== true): ?>
                 <p><a href="secure.php">Profile: <?= htmlspecialchars(strtoupper($_SESSION['user'])); ?></a></p>
-                <p> <a href="logout.php">Logout</a></p>
+            <?php else: ?>
+                <p><a href="home.php">Profile: <?= htmlspecialchars(strtoupper($_SESSION['user'])); ?></a></p>
             <?php endif; ?>
+            <p> <a href="logout.php">Logout</a></p>
+        <?php endif; ?>
         </div>
     </div>
 

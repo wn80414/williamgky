@@ -33,7 +33,7 @@ if (isset($login)) {
 
             // call function checkPassword to verify user's password
             if (checkPassword($password, $field) == true)
-                accessGranted($username);
+                accessGranted($username, $field[2]);
             else
                 wrongPassword();
         }
@@ -58,12 +58,18 @@ function checkPassword($userpassword, $filedata)
 }
 
 // print a message indicating permission has been granted
-function accessGranted($username)
+function accessGranted($username, $role)
 {
     $_SESSION['user'] = $username;
     $_SESSION['logged_in'] = true;
+    $_SESSION['role'] = $role;
     session_regenerate_id(true);
-    header("Location: secure.php");
+    if ($role == 'admin'){
+        header("Location: secure.php");     
+    } else{
+        header("Location: home.php");     
+    } 
+    
     exit();
 }
 // print a message indicating password is invalid

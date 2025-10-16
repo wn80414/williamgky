@@ -52,7 +52,7 @@ if (isset($register)) {
 
     // write username and password to file and
     // call function userAdded
-    fputs($file, "$username,$password\n");
+    fputs($file, "$username,$password,user\n");
     userAdded($username);
     fclose($file);
 }

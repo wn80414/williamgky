@@ -2,13 +2,11 @@
 
 <?php
 $result = [];
-if (!isset($_SESSION['user']) || $_SESSION['logged_in'] !== true) {
-    echo "<title>Access Denied</title></head>
-        <body style = \"font-family: arial;
-        font-size: 1em; color: red\">
-        <strong>You were denied access to this server.
-        <br /></strong>";
-    exit();
+if (!isset($_SESSION['role']) || !isset($_SESSION['logged_in'])) {
+    denyAccess();
+}
+if ($_SESSION['role'] !== 'admin' || $_SESSION['logged_in'] !== true) {
+    denyAccess();
 } else {
     // for reading
     if (!($file = fopen("../secure/password.txt", "r"))) {
@@ -29,6 +27,16 @@ if (!isset($_SESSION['user']) || $_SESSION['logged_in'] !== true) {
     }
     // close text file
     fclose($file);
+}
+
+function denyAccess()
+{
+    echo "<title>Access Denied</title></head>
+        <body style = \"font-family: arial;
+        font-size: 1em; color: red\">
+        <strong>You were denied access to this server.
+        <br /></strong>";
+    exit();
 }
 ?>
 <!-- Main Content -->
