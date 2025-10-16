@@ -76,7 +76,7 @@ function accessGranted($username, $role)
 function wrongPassword()
 {
     $_SESSION['error'] = "Wrong username or password.";
-    header("Location: register.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -84,13 +84,13 @@ function wrongPassword()
 function accessDenied()
 {
     $_SESSION['error'] = "Wrong username or password.";
-    header("Location: register.php");
+    header("Location: login.php");
     exit();
 }
 // print a message indicating that fields have been left blank
 function fieldsBlank()
 {
     $_SESSION['error'] = "Please fillout all form fields.";
-    header("Location: register.php");
+    header("Location: login.php");
     exit();
 }
