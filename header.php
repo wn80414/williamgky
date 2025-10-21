@@ -68,7 +68,7 @@ session_start();
         <div class="nav-center">
             <a href="home.php">Home</a>
             <a href="about.php">About</a>
-            <a href="products.php">Products</a>
+            <a href="product_list.php">Products</a>
             <a href="news.php">News</a>
             <a href="contacts.php">Contact</a>
             <a href="animal.php">Animal</a>
