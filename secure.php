@@ -22,8 +22,9 @@ if ($_SESSION['role'] !== 'admin' || $_SESSION['logged_in'] !== true) {
 
         // split username and password
         $field = explode(",", $line);
-
-        array_push($result, $field[0]);
+        if (!$field[0] == "") {
+            array_push($result, $field[0]);
+        }
     }
     // close text file
     fclose($file);
