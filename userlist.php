@@ -2,8 +2,8 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$file = 'users.txt';
 $result = [];
+
 // for reading
 if (!($file = fopen("../secure/password.txt", "r"))) {
     print("<title>Error</title></head>

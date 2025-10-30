@@ -72,6 +72,8 @@ session_start();
             <a href="news.php">News</a>
             <a href="contacts.php">Contact</a>
             <a href="animal.php">Animal</a>
+            <a href="myusers.php">My Company User List</a>
+            <a href="curl.php">Other Company's User List</a>
         </div>
         <div class="nav-right">
             <?php if (!isset($_SESSION['user']) || $_SESSION['logged_in'] !== true): ?>

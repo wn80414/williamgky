@@ -40,12 +40,30 @@ function denyAccess()
     exit();
 }
 ?>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 40%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
 <!-- Main Content -->
 <div class="container">
     <h1>Welcome <?= htmlspecialchars($_SESSION['user']); ?>!</h1><br>
 </div>
 
 <div class="container">
+
     <table style="text-align:center;">
         <tr>
             <th>Users</th>
