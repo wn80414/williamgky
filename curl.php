@@ -22,28 +22,6 @@ class Curl
     return $final_decoded_data;
   }
 }
-$william_db = [];
-//Read my company database
-// for reading
-if (!($file = fopen("../secure/password.txt", "r"))) {
-  print("<title>Error</title></head>
-            <body>Could not open password file
-            </body></html>");
-  die();
-}
-// read each line in the file and extract name and password
-while (!feof($file)) {
-  $line = fgets($file);
-  $line = chop($line);
-
-  // split username and password
-  $field = explode(",", $line);
-  if (!$field[0] == "") {
-    array_push($william_db, $field[0]);
-  }
-}
-// close text file
-fclose($file);
 
 //Curl Other Companies
 $tommy_db = Curl::getUserList('https://plb.bfm.mybluehost.me/righttwice/curl.php')['result'];
@@ -51,26 +29,9 @@ $sean_db = Curl::getUserList('https://seanhtran.com/users.php?format=json')['dat
 
 $fullNames = array_map(fn($p) => $p['firstName'] . ' ' . $p['lastName'], $sean_db);
 
-include("header.php");
+include("myusers.php");
 ?>
 <body>
-  <br>
-  <div class="container page-offset">
-    <table>
-      <thead>
-        <tr>
-          <th>Spartan Market Users (William Nguyen)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach ($william_db as $name): ?>
-          <tr>
-            <td><?= htmlspecialchars($name) ?></td>
-          </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
-  </div>
   <br>
   <div class="container">
     <table>

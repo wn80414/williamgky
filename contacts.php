@@ -6,16 +6,13 @@
 
 <body>
 
-    <!-- Contact Section -->
     <div class="contact-container">
 
-        <!-- Contact Info -->
         <div class="contact-info">
             <br>
             <h2>Contact Us</h2>
             <pre>
                 <?php
-                // Path to the text file
                 $filename = 'contacts.txt';
 
                 // Check if file exists

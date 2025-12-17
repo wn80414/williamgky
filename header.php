@@ -8,11 +8,10 @@ session_start();
 
     <meta charset="UTF-8">
     <title>Spartan Market</title>
-    <!-- Google Font: Inter -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6mY5Y6Yd2Vn0s0k3QpQ4f5p3K/3e1Z6mZ6Y5v1p6Kj3q9R6qD9Q6G5z6K" crossorigin="anonymous">
-    <!-- Site styles (load after bootstrap & fonts) -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 

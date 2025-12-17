@@ -1,33 +1,21 @@
 <?php
 include("header.php");
+require_once __DIR__ . '/inc/db.php';
 
-$result = [];
-// for reading
-if (!($file = fopen("../secure/password.txt", "r"))) {
-    print("<title>Error</title></head>
-            <body>Could not open password file
-            </body></html>");
-    die();
-}
-// read each line in the file and extract name and password
-while (!feof($file)) {
-    $line = fgets($file);
-    $line = chop($line);
+$pdo = get_db();
 
-    // split username and password
-    $field = explode(",", $line);
-    if (!$field[0] == "") {
-        array_push($result, $field[0]);
-    }
+try {
+    $stmt = $pdo->query("SELECT username FROM users ORDER BY username ASC");
+    $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
+} catch (PDOException $e) {
+    die("Database error: " . $e->getMessage());
 }
-// close text file
-fclose($file);
 ?>
 
 <body>
     <br>
     <div class="container page-offset">
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Spartan Market Users (William Nguyen)</th>

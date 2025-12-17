@@ -6,14 +6,18 @@ require_once __DIR__ . '/inc/db.php';
 $pdo = get_db();
 
 try {
-    // Fetch all usernames from the database
-    $stmt = $pdo->query("SELECT username FROM users ORDER BY username ASC");
-    $users = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    // Fetch all products from the database
+    $stmt = $pdo->query("
+        SELECT id, name, `desc`, img, price
+        FROM products
+        ORDER BY id ASC
+    ");
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     echo json_encode([
         "status" => "success",
-        "count" => count($users),
-        "result" => $users
+        "count" => count($products),
+        "result" => $products
     ], JSON_PRETTY_PRINT);
 
 } catch (PDOException $e) {

@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <body>
-    <!-- Main Content -->
+    
     <div class="container page-offset">
         <h1>Spartan Market</h1><br>
     </div>

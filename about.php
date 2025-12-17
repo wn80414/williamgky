@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 
- <!-- Main Content -->
+
  <div class="container page-offset">
     <h1>About</h1>
  </div>
