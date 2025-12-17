@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 <body>
-<div class="container">
+<div class="container page-offset">
 
   <svg width="200" height="350" viewBox="0 0 200 350" xmlns="http://www.w3.org/2000/svg">
     <!-- Left Ear -->

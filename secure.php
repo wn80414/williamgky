@@ -33,30 +33,11 @@ if ($_SESSION['role'] !== 'admin' || $_SESSION['logged_in'] !== true) {
 function denyAccess()
 {
     echo "<title>Access Denied</title></head>
-        <body style = \"font-family: arial;
-        font-size: 1em; color: red\">
-        <strong>You were denied access to this server.
-        <br /></strong>";
+        <body class=\"access-denied\">\n        <strong>You were denied access to this server.\n        <br /></strong>";
     exit();
 }
 ?>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 40%;
-    }
 
-    th,
-    td {
-        border: 1px solid #ccc;
-        padding: 8px 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-</style>
 <!-- Main Content -->
 <div class="container">
     <h1>Welcome <?= htmlspecialchars($_SESSION['user']); ?>!</h1><br>
@@ -64,7 +45,7 @@ function denyAccess()
 
 <div class="container">
 
-    <table style="text-align:center;">
+    <table class="center-table">
         <tr>
             <th>Users</th>
         </tr>

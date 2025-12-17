@@ -1,29 +1,7 @@
 <?php include('header.php'); ?>
 
 <head>
-    <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
-
-    .contact-container {
-        background-color: white;
-        max-width: 1000px;
-        margin: 60px auto;
-        padding: 0 20px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .contact-info p {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    </style>
 </head>
 
 <body>

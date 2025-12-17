@@ -2,7 +2,7 @@
 <?php include 'product_item.php'; ?>
 
 <body>
-    <div class="container">
+    <div class="container page-offset">
         <h1>Our Products</h1>
     </div>
     <div class="container">
@@ -28,34 +28,5 @@
         
     </div>
 
-    <style>
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        li {
-            margin: 15px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 200px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .product-name {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-    </style>
+    
 </body>

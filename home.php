@@ -2,7 +2,7 @@
 
 <body>
     <!-- Main Content -->
-    <div class="container">
+    <div class="container page-offset">
         <h1>Spartan Market</h1><br>
     </div>
     <div class="container">

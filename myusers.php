@@ -23,27 +23,10 @@ while (!feof($file)) {
 // close text file
 fclose($file);
 ?>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 40%;
-    }
-
-    th,
-    td {
-        border: 1px solid #ccc;
-        padding: 8px 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-</style>
 
 <body>
     <br>
-    <div class="container">
+    <div class="container page-offset">
         <table>
             <thead>
                 <tr>

@@ -1,15 +1,16 @@
 <?php
 include 'product_item.php';
 include 'header.php';
+include_once __DIR__ . '/inc/visits.php';
 
-$visit_counter = isset($_COOKIE['visit_counter']) ? json_decode($_COOKIE['visit_counter'], true) : [];
+$visit_counter = get_all_visits();
 arsort($visit_counter);
 $top5 = array_slice($visit_counter, 0, 5, true);
 
 ?>
 
 <body>
-    <div class="container">
+    <div class="container page-offset">
 
         <h1>Top 5 Most Visited Products</h1>
     </div>
@@ -34,34 +35,5 @@ $top5 = array_slice($visit_counter, 0, 5, true);
     <div class="container">
         <p><a href="product_list.php">Back to Products</a></p>
     </div>
-    <style>
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        li {
-            margin: 15px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 200px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .product-name {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-    </style>
+    
 </body>

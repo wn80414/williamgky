@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
-<!-- Main Content -->
- <div class="container">
+ <!-- Main Content -->
+ <div class="container page-offset">
     <h1>About</h1>
  </div>
 <div class="container">
@@ -18,12 +18,7 @@
     </p>
 </div>
 
-<style>
-.container p {
-  display: inline-block; /* Makes the paragraph behave like an inline element but with block properties */
-  text-align: left; /* Aligns the text within the paragraph to the left */
-}
-</style>
+ 
 
 </body>
 </html>

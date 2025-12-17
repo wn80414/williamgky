@@ -8,58 +8,12 @@ session_start();
 
     <meta charset="UTF-8">
     <title>Spartan Market</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 0 20px;
-            height: 60px;
-        }
-
-        .nav-center,
-        .nav-right {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-center {
-            margin: 0 auto;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        .navbar a:hover {
-            background-color: #575757;
-            border-radius: 4px;
-        }
-
-        /* Page Content */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #0e0e0eff;
-            font-size: 18px;
-        }
-    </style>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa6mY5Y6Yd2Vn0s0k3QpQ4f5p3K/3e1Z6mZ6Y5v1p6Kj3q9R6qD9Q6G5z6K" crossorigin="anonymous">
+    <!-- Site styles (load after bootstrap & fonts) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -91,6 +45,17 @@ session_start();
         <?php endif; ?>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <small>&copy; <?= date('Y') ?> Spartan Market — Built by SJSU students</small>
+            </div>
+            <div class="footer-right">
+                <a href="contacts.php">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
