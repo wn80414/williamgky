@@ -7,16 +7,14 @@ $visited_ids = isset($_COOKIE['visited_products']) ? explode(',', $_COOKIE['visi
 
 <body>
     <div class="container page-offset">
-
         <h1>Last 5 Visited Products</h1>
     </div>
     
     <div class="container">
-        <h1>Last 5 Visited Products</h1>
         <ul class="top5-list">
             <?php foreach ($visited_ids as $id): ?>
                 <li>
-                    <a href="product.php?id=<?= $id ?>">
+                    <a href="product.php?id=<?= $id - 1?>">
                         <img src="<?= $products[$id]['img'] ?>" alt="<?= $products[$id]['name'] ?>">
                         <span class="product-name"><?= $products[$id]['name'] ?></span>
                     </a>
